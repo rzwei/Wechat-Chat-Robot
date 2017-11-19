@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+</p>
+<table class="table">
+    <caption>进程数</caption>
+    <thead>
+    <tr>
+        <th>pid</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+
+    {% for instance in instances%}
+    <tbody>
+    <tr>
+        <td>{{instance.pid}}</td>
+        <td>alive</td>
+    </tr>
+    {% endfor%}
+    </tbody>
+</table>
+
+{% endblock %}

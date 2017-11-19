@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<script>
+    function uploadImage() {
+        $.ajax({
+            type: "POST",
+            url: "{{ url_for('upload') }}",
+            data: new FormData($('#imageform')[0]),
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                alert("上传成功");
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("上传失败，请检查网络后重试");
+            }
+        });
+    }
+</script>
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-2 column">
+        </div>
+        <div class="col-md-6 column">
+            <div class="page-header">
+                <h1>
+                    点击按钮启动
+                </h1>
+            </div>
+            <a href="{{ url_for('start') }}">
+                <button class="btn btn-default" type="button">按钮</button>
+            </a>
+            <div class="page-header">
+                <h1>
+                    查看后台进程
+                </h1>
+            </div>
+            <a href="{{ url_for('menu') }}">
+                <button class="btn btn-default" type="button">按钮</button>
+            </a>
+            <div class="page-header">
+                <h1>
+                    上传图片
+                </h1>
+            </div>
+
+            <form role="form" id="imageform" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="pictureid">File input</label><input name="picture" id="pictureid" type="file"/>
+                    <p class="help-block">
+                        选择进行替换的图片
+                    </p>
+                </div>
+            </form>
+            <button class="btn btn-default" onclick="uploadImage()">按钮</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <h3 class="text-center">
+                登陆
+            </h3>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-4 column">
+        </div>
+        <div class="col-md-4 column">
+            <form role="form" method="post" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">账号</label><input class="form-control"
+                                                                     id="exampleInputEmail1" name="account"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">密码</label><input class="form-control"
+                                                                        name="password"
+                                                                        id="exampleInputPassword1"
+                                                                        type="password"/>
+                </div>
+                <button class="btn btn-default" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-4 column">
+        </div>
+    </div>
+</div>
+{% endblock %}

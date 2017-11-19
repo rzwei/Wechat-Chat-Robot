@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {% for name,result in results %}
+                <img class="img-responsive" src="{{ imageServer+name }}">
+                <p>{{ result }}</p><br>
+            {% endfor %}
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+{% endblock %}

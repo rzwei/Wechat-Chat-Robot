@@ -1,0 +1,16 @@
+{
+  "dbaddress": "127.0.0.1",
+  "basepath": "C:/clients/weixinbot_flask-release",
+  "dbusername": "root",
+  "dbpassword": "toor",
+  "eachweekjson": "./myJson/eachWeekTips.json",
+  "addfriendjson": "./myJson/AddFriend.json",
+  "waitpicjson": "./myJson/PictureNoReply.json",
+  "dailycheckjson": "./myJson/dailycheck.json",
+  "afterTarotjson": "./myJson/afterTarot.json",
+  "host": "114.215.46.13",
+  "port":5000,
+  "account": "admin",
+  "password": "admin",
+  "aliveCount":1
+}

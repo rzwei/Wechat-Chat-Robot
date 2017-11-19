@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+<p>this is a paragraph</p>
+<script>
+    $('p').ready(function () {
+        $(this).click(function () {
+            $(this).hide()
+        })
+    });
+</script>
+{% block body %}
