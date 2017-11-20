@@ -11,6 +11,6 @@
   "host": "114.215.46.13",
   "port":5000,
   "account": "admin",
-  "password": "admin",
+  "password": "admin2",
   "aliveCount":1
 }
